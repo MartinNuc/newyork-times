@@ -1,0 +1,16 @@
+
+<!--
+  This way i can pick each from the array by index.
+
+  <app-article [article]="articles[0]"></app-article>
+  <app-article [article]="articles[1]"></app-article>
+ -->
+
+
+<!-- using ngFor: -->
+<div *ngFor="let singleOne of articles">
+  <app-article
+      [articleInput]="singleOne"
+      (liked)="likeArticle(singleOne)"
+    ></app-article>
+</div>
